@@ -10,10 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseReactiveUI(uiBuilder => 
-				uiBuilder.WithMaui()
-					.BuildApp()
-				)
+			.UseReactiveUI(rxAppBuilder => rxAppBuilder.WithMaui())
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
